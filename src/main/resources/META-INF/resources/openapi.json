@@ -1,0 +1,59 @@
+{
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "definitions": {
+    "Hello": {
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "type": "object"
+    }
+  },
+  "info": {
+    "contact": {
+      "name": "Swagger API Team"
+    },
+    "description": "A sample API that uses a hello world as an example to demonstrate features in the swagger-2.0 specification",
+    "license": {
+      "name": "MIT"
+    },
+    "termsOfService": "http://swagger.io/terms/",
+    "title": "Swagger Hello REST API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/hello": {
+      "get": {
+        "description": "Returns hello message",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "A message",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Hello"
+              },
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0"
+}

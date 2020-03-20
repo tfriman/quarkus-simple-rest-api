@@ -8,6 +8,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.*;
+import java.util.Iterator;
 
 @Path("/hello")
 public class ExampleResource {

@@ -1,0 +1,40 @@
+---
+info:
+  version: "1.0.0"
+  title: "Swagger Hello REST API"
+  description: "A sample API that uses a hello world as an example to demonstrate features in the swagger-2.0 specification"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    name: "Swagger API Team"
+  license:
+    name: "MIT"
+swagger: "2.0"
+basePath: "/"
+schemes:
+  - "http"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  /hello:
+    get:
+      description: "Returns hello message"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "A message"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/Hello"
+definitions:
+  Hello:
+    type: "object"
+    required:
+      - "message"
+    properties:
+      message:
+        type: "string"
+

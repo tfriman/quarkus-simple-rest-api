@@ -2,7 +2,7 @@
 # ARTIFACT_COPY_ARGS=-p -r lib/ *-runner.jar
 # See https://github.com/jboss-openshift/cct_module/issues/336
 
-MAVEN_S2I_ARTIFACT_DIRS=target
-S2I_SOURCE_DEPLOYMENTS_FILTER=*-runner.jar lib
+#MAVEN_S2I_ARTIFACT_DIRS=target
+#S2I_SOURCE_DEPLOYMENTS_FILTER=*-runner.jar lib
 
 JAVA_OPTIONS=-Dquarkus.http.host=0.0.0.0

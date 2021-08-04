@@ -1,6 +1,6 @@
 package timotest;
 
-import org.eclipse.microprofile.metrics.annotation.Timed;
+import io.micrometer.core.annotation.Timed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +22,7 @@ public class ExampleResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Timed(name = "helloEndpoint")
+    @Timed("quarkusDemoEndpoint")
     public DomainObject hello() throws InterruptedException {
         LOG.info("/hello called");
         // make some variation to response time
@@ -30,7 +30,7 @@ public class ExampleResource {
         return new DomainObject("hello");
     }
 
-    private static class DomainObject {
+    public static class DomainObject {
         private final String message;
         private final LocalDateTime localDateTime;
         private final String hostname;
